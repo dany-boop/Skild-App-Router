@@ -1,0 +1,13 @@
+$brown-font-path: '../../public/fonts/brown';
+
+@font-face {
+	src: url('#{$brown-font-path}/BrownStd-RegularAlt.woff') format('woff');
+	font-family: 'Brown-Regular';
+    font-weight: 400;
+}
+
+@font-face {
+	src: url('#{$brown-font-path}/BrownStd-BoldAlt.woff') format('woff');
+	font-family: 'Brown-Bold';
+    font-weight: 700;
+}

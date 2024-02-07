@@ -1,0 +1,163 @@
+@mixin font-size($sizeValue: 1.6, $line: 1.2em) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+    line-height: $line;
+}
+
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin opacity($opac) {
+    opacity: $opac/100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opac)";
+    filter: alpha(opacity=$opac);
+}
+
+@mixin round($rad) {
+    -moz-border-radius: $rad;
+    -webkit-border-radius: $rad;
+    border-radius: $rad;
+}
+
+@mixin box-shadow($dist, $color) {
+    -moz-box-shadow: $dist $dist $dist $color;
+    -webkit-box-shadow: $dist $dist $dist $color;
+    box-shadow: $dist $dist $dist $color;
+}
+
+@mixin transition($details) {
+    -webkit-transition: $details;
+    -moz-transition: $details;
+    transition: $details;
+    -o-transition: $details;
+}
+
+@mixin transform($details) {
+    -webkit-transform: $details;
+    -moz-transform: $details;
+    transform: $details;
+    -o-transform: $details;
+}
+
+@mixin all-trans {
+    transition: all .1s linear;
+    -o-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+}
+
+@mixin no-trans {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
+
+@mixin vertical-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+@mixin respond-to($media) {
+    $vsm: 364px;
+    $sm: 480px;
+    $med: 768px;
+    $nb: 960px;
+    $lg: 1280px;
+    $mlg: 1366px;
+    $xl: 1600px;
+    $xxl: 1920px;
+    $xxxl: 2400px;
+
+    @if $media ==very-small {
+        @media only screen and (max-width: $vsm) {
+            @content;
+        }
+    }
+
+    @else if $media ==small {
+        @media only screen and (max-width: $sm) {
+            @content;
+        }
+    }
+
+    @else if $media ==smallmid {
+        @media only screen and (min-width: $sm) and (max-width: ($med)) {
+            @content;
+        }
+    }
+
+    @else if $media ==small-midle {
+        @media only screen and (max-width: ($med + 1)) {
+            @content;
+        }
+    }
+
+    @else if $media ==medium {
+        @media only screen and (min-width: $med) {
+            @content;
+        }
+    }
+
+    @else if $media ==notebook {
+        @media only screen and (min-width: $nb) {
+            @content;
+        }
+    }
+
+    @else if $media ==phablet {
+        @media only screen and (min-width: $med) and (max-width: ($lg - 1)) {
+            @content;
+        }
+    }
+
+    @else if $media ==large {
+        @media only screen and (min-width: $lg) {
+            @content;
+        }
+    }
+
+    @else if $media ==more-large {
+        @media only screen and (min-width: $mlg) {
+            @content;
+        }
+    }
+
+    @else if $media ==extra-large {
+        @media only screen and (min-width: $xl) {
+            @content;
+        }
+    }
+
+    @else if $media ==xx-large {
+        @media only screen and (min-width: $xxl) {
+            @content;
+        }
+    }
+
+    @else if $media ==xxx-large {
+        @media only screen and (min-width: $xxxl) {
+            @content;
+        }
+    }
+
+    @else if $media ==retina {
+        @media only screen and (-webkit-device-pixel-ratio: 2) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (min-width: $media) {
+            @content;
+        }
+    }
+}

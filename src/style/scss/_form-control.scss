@@ -1,0 +1,22 @@
+::-webkit-input-placeholder {
+  font-size: 15px;
+  // color:#ff0000 ;
+}
+
+form input:not(.is-invalid),
+form input:not(.is-valid) {
+    padding-right: none !important;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid{
+   padding-right: none !important;
+}
+
+input { 
+   padding-right: none !important;
+}
+$input-padding-y: 50px;
+$input-margin-x: 30px;
+
+$form-feedback-icon-valid: none;
+$form-feedback-icon-invalid: none;

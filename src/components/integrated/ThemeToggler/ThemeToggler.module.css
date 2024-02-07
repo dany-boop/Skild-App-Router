@@ -1,0 +1,14 @@
+.themeSwitcher {
+    margin-top: 20px;
+  }
+  .lightTheme {
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #f8f9fa;
+    --text-color: #333333;
+  }
+  
+  .darkTheme {
+    --primary-bg-color: #343a40;
+    --secondary-bg-color: #212529;
+    --text-color: #ffffff;
+  }

@@ -1,0 +1,12 @@
+'use client'
+import Link from '@/hooks/navigation/link';
+
+export default function NotFound() {
+	return (
+		<div>
+			<h2>Not Found</h2>
+			<p>Could not find requested resource</p>
+			<Link href='/dashboard'>Return Home</Link>
+		</div>
+	);
+}

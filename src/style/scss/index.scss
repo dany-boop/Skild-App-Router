@@ -1,0 +1,52 @@
+@import './typography';
+@import './form-control';
+@import './overwrite';
+
+//font
+$headings-font-weight: 700;
+
+// $font-family-sans-serif: 'Brown Alternate', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji',
+// 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+// $display-font-family: 'Brown Alternate', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+// 'Segoe UI Symbol', 'Noto Color Emoji';
+
+.fs-smaller {
+	font-size: 10px; /* Adjust the value as needed */
+  }
+
+
+//color 
+$blue:    #0089C4 ;
+$indigo:  #6610f2 ;
+$purple:  #6f42c1 ;
+$pink:    #d63384 ;
+$red:     #dc3545 ;
+$orange:  #fd7e14 ;
+$yellow: #FFD600 ;
+$green:   #198754 ;
+$teal:    #20c997 ;
+$cyan:    #0dcaf0 ;  
+$gray-600: #909090;
+$gray-100:#EEEEEE;
+$gray-900: #3D3D3D;
+$white :#F9F9F9;
+
+// --bs-secondary-bg-rgb:
+
+
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// Then add additional custom code here
+
+  
+
+
+
+// Don't forget to run: sass --watch src/style/scss/index.scss src/app/globals.css
